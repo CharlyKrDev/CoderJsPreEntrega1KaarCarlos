@@ -26,6 +26,7 @@ if (edad >= 18) {
   spanEdad.textContent = spanEdad.textContent + " " + edad;
 } else {
   alert("Volve en otro momento! Saludos.");
+  console.log(nombre + " " + " " + apellido + " " + edad);
 }
 alert("Tener en cuenta que si el resultado es 5 se corta el ciclo");
 let base = parseInt( prompt("Ingrese el numero que sera la base para cada interaccion"));
