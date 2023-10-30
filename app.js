@@ -28,7 +28,7 @@ if (edad >= 18) {
   alert("Volve en otro momento! Saludos.");
   console.log(nombre + " " + " " + apellido + " " + edad);
 }
-alert("Tener en cuenta que si el resultado es 5 se corta el ciclo");
+alert("Tener en cuenta que es un ciclo de 10 interaciones, pero si el resultado es 5 se corta el ciclo");
 let base = parseInt( prompt("Ingrese el numero que sera la base para cada interaccion"));
 let resultado = 0;
 for (let i = 0; i < 10; i++) {
