@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #242424;
+}
+
+main {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+
+span {
+    color: rgb(241, 241, 232);
+    margin: 50px;
+}
