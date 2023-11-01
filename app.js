@@ -35,9 +35,15 @@ for (let i = 0; i < 10; i++) {
   let multiplicador = parseInt(prompt("Ingrese el numero que va a multiplicar la base"));
   let divisor = parseInt(prompt("Ingrese el numero que va a dividir"));
   resultado = (base * multiplicador)/divisor;
-  if (resultado == 5) {
+ if (isNaN(base)) {
+   base = parseInt( prompt("Ingrese el numero que sera la base para cada interaccion"));
+  }else if (resultado == 5) {
     break;
   }
-  alert(resultado);
-  console.log(resultado);
+  else if (resultado === undefined || resultado === null || isNaN(resultado)) {
+    alert("Los valores ingresados no son correctos, volvelo a intentar");
+  } else {
+    alert(resultado);
+    console.log(resultado);
+  }
 }
