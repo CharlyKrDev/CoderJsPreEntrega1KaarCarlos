@@ -14,8 +14,8 @@ function chequearDatos(nombre, apellido, edad) {
     apellidoChequeado = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$/.test(apellido);
   }
   if (edad >= 18) {
-    alert("Bienvenido" + "  " + nombre + "  " + apellido);
-    console.log(nombre + " " + " " + apellido + " " + edad);
+    alert("Bienvenido" + " " + nombre + " " + apellido);
+    console.log(nombre + " " + apellido + " " + edad);
   } else {
     alert("Volve cuando tengas 18! Saludos.");
     console.log(nombre + " " + " " + apellido + " " + edad);
