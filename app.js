@@ -24,14 +24,14 @@ function chequearDatos(nombre, apellido, edad) {
 chequearDatos(nombre, apellido, edad);
 
 alert(
-  "Tener en cuenta que es un ciclo de 10 interacciones, pero si el resultado es 5 se corta el ciclo"
+  "Tener en cuenta que es un ciclo de 3 interacciones, pero si el resultado es 5 se corta el ciclo"
 );
 let base = parseInt(
   prompt("Ingrese el numero que sera la base para cada interaccion")
 );
 let resultado = 0;
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 3; i++) {
   let multiplicador = parseInt(
     prompt("Ingrese el numero que va a multiplicar la base")
   );
