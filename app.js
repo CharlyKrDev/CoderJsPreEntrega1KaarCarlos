@@ -18,7 +18,7 @@ function chequearDatos(nombre, apellido, edad) {
     console.log(nombre + " " + apellido + " " + edad);
   } else {
     alert("Volve cuando tengas 18! Saludos.");
-    console.log(nombre + " " + " " + apellido + " " + edad);
+    console.log(nombre + " " + apellido + " " + edad);
   }
 }
 chequearDatos(nombre, apellido, edad);
