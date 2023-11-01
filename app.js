@@ -21,7 +21,7 @@ function checkearDatos() {
   } else {
     alert("Volve cuando tengas 18! Saludos.");
     console.log(
-      "Usuario: " + nombre + " " + apellido + ", de " + edad + " años."
+      "Usuario: " + nombre + " " + apellido + " de " + edad + " años."
     );
   }
 }
