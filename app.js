@@ -4,27 +4,32 @@ let edad = parseInt(prompt("Cual es tu edad? Gracias"));
 let nombreChequeado = true;
 let apellidoChequeado = true;
 
-function chequearDatos(nombre, apellido, edad) {
+function checkearDatos() {
   while (nombre.length < 3 || nombreChequeado !== true) {
     nombre = prompt("Por favor ingresa tu nombre");
-    nombreChequeado = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$/.test(nombre);
+    nombreChequeado = /^[A-Za-z]+$/.test(nombre);
   }
   while (apellido.length < 3 || apellidoChequeado !== true) {
     apellido = prompt("Por favor ingresa tu apellido");
-    apellidoChequeado = /^[A-Za-zÁáÉéÍíÓóÚúÜüÑñ]+$/.test(apellido);
+    apellidoChequeado = /^[A-Za-z]+$/.test(apellido);
   }
   if (edad >= 18) {
-    alert("Bienvenido" + " " + nombre + " " + apellido);
-    console.log(nombre + " " + apellido + " " + edad);
+    alert("Bienvenido " + nombre + " " + apellido);
+    console.log(
+      "Usuario: " + nombre + " " + apellido + ", de " + edad + " años."
+    );
   } else {
     alert("Volve cuando tengas 18! Saludos.");
-    console.log(nombre + " " + apellido + " " + edad);
+    console.log(
+      "Usuario: " + nombre + " " + apellido + ", de " + edad + " años."
+    );
   }
 }
-chequearDatos(nombre, apellido, edad);
+
+checkearDatos();
 
 alert(
-  "Tener en cuenta que es un ciclo de 3 interacciones, pero si el resultado es 5 se corta el ciclo"
+  "Tener en cuenta que es un ciclo de 3 interacciones, pero si el resultado es 5 se corta el ciclo. (Ejemplo: Ingresando 5 - 2 - 2)"
 );
 let base = parseInt(
   prompt("Ingrese el numero que sera la base para cada interaccion")
