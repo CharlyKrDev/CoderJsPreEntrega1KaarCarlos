@@ -45,7 +45,7 @@ for (let i = 0; i < 3; i++) {
 
 const tuAnimalEs = [
   {
-    Animal: "el Fénix",
+    Animal: "el Fénix", id: 1,
     Origen: "Grecia",
     Caracteristicas: "ser un ave del color del fuego",
     Habilidad: "resurgir de sus cenizas",
@@ -53,7 +53,7 @@ const tuAnimalEs = [
     Debilidad: "su propio fuego",
   },
   {
-    Animal: "la Esfinge",
+    Animal: "la Esfinge", id: 2,
     Origen: "Egipto",
     Caracteristicas: "tener cabeza de mujer y cuerpo de león",
     Habilidad: "ser super inteligente",
@@ -61,7 +61,7 @@ const tuAnimalEs = [
     Debilidad: "su egocentrismo",
   },
   {
-    Animal: "el Dragón",
+    Animal: "el Dragón", id: 3,
     Origen: "China",
     Caracteristicas: "tener alas y escamas color jade",
     Habilidad: "controlar el fuego",
@@ -69,7 +69,7 @@ const tuAnimalEs = [
     Debilidad: " que es vulnerable a la magia",
   },
   {
-    Animal: "el Pegaso",
+    Animal: "el Pegaso", id: 4,
     Origen: "Grecia",
     Caracteristicas: "ser un caballo alado color marfil",
     Habilidad: "volar y viajar por las estrellas",
@@ -77,8 +77,8 @@ const tuAnimalEs = [
     Debilidad: "que es vulnerable a las flechas y armas de hierro",
   },
   {
-    Animal: "el Unicornio",
-    Origen: "Europa",
+    Animal: "el Unicornio", id: 5,
+    Origen: "Europa", 
     Caracteristicas: " su cuerno en la frente y capacidad de curar cualquier enfermedad",
     Habilidad: "su pureza y su capacidad de comunicarse telepáticamente",
     Fortaleza: "Pureza, bondad y magia",
@@ -87,31 +87,16 @@ const tuAnimalEs = [
 ];
 
 const eligeTuAnimal = parseInt(
-  prompt("Un numero del 1 al 5 para saber que animal mitológico te representa")
+  prompt("Ingrese un número del 1 al 5 para saber qué animal mitológico te representa")
 );
 
-function tuAnimalSera(eligeTuAnimal) {
-  if (eligeTuAnimal == 1) {
-    alert("Tu animal es " + tuAnimalEs[0].Animal);
-    return (animalGuardado = tuAnimalEs[0]);
-  } else if (eligeTuAnimal == 2) {
-    alert("Tu animal es " + tuAnimalEs[1].Animal);
-    return (animalGuardado = tuAnimalEs[1]);
-  } else if (eligeTuAnimal == 3) {
-    alert("Tu animal es " + tuAnimalEs[2].Animal);
-    return (animalGuardado = tuAnimalEs[2]);
-  } else if (eligeTuAnimal == 4) {
-    alert("Tu animal es " + tuAnimalEs[3].Animal);
-    return (animalGuardado = tuAnimalEs[3]);
-  } else if (eligeTuAnimal == 5) {
-    alert("Tu animal es " + tuAnimalEs[4].Animal);
-    return (animalGuardado = tuAnimalEs[4]);
-  } else {
-    alert("Te quedaste sin animal, animal!");
-  }
-  
+const animalElegido = tuAnimalEs.find(animal => animal.id === eligeTuAnimal);
+
+if (animalElegido) {
+  alert(`Has elegido ${animalElegido.Animal}`);
+} else {
+  alert("Número no válido. Por favor, elige un número del 1 al 5.");
 };
-tuAnimalSera(eligeTuAnimal);
 
 const masDeTuAnimal = prompt(
   "Querés saber mas de tu animal? (si/no)"
@@ -120,17 +105,17 @@ function saberMas() {
   if (masDeTuAnimal === "SI") {
     alert(
       "Tu animal es " +
-      animalGuardado.Animal +
+      animalElegido.Animal +
       " tiene origen en " +
-      animalGuardado.Origen +
+      animalElegido.Origen +
       " se caracteriza por " +
-      animalGuardado.Caracteristicas +
+      animalElegido.Caracteristicas +
       ", tiene la habilidad de " +
-      animalGuardado.Habilidad +
+      animalElegido.Habilidad +
       ", sus fortalezas son " +
-      animalGuardado.Fortaleza +
+      animalElegido.Fortaleza +
       ", y por ultimo su debilidad es " +
-      animalGuardado.Debilidad +
+      animalElegido.Debilidad +
       ". Saludos"
     );
   } else if (masDeTuAnimal === "NO") {
@@ -140,7 +125,7 @@ function saberMas() {
   }
 };
 
-saberMas(animalGuardado);
+saberMas(animalElegido);
 
 class Animales {
   constructor(
@@ -193,6 +178,8 @@ function esLetra(texto) {
 };
 
 
+
+
 const nuevoAnimal = prompt("Querés conocer a tu animal? (si/no)").toUpperCase();
 function animalIngresado() {
   if (nuevoAnimal === "SI") {
@@ -219,5 +206,4 @@ function animalIngresado() {
     );
 }
 animalIngresado(tuAnimalEs[5]);
-
 
