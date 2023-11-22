@@ -149,7 +149,7 @@ alert('Ahora vas a crear un animal mitológico');
 
 const nombreDeAni = validarInput("Ingresa el nombre de tu animal mitológico");
 const origenAnimal = validarInput("Tu animal tiene origen en...");
-const caracteristicasAnimal = validarInput("Tu animal esta caracterizado por...");
+const caracteristicasAnimal = validarInput("Tu animal se caracteriza por...");
 const habilidadAnimal = validarInput("Las habilidad de tu animal es...");
 const fortalezaAnimal = validarInput("Las fortalezas de tu animal son...");
 const debilidadAnimal = validarInput("La debilidad de tu animal es...");
