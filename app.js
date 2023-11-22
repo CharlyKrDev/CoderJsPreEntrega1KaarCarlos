@@ -158,22 +158,16 @@ class Animales {
     this.Fortaleza = Fortaleza;
     this.Debilidad = Debilidad;
   }
-};
+}
 
-alert ('Ahora vas a crear un animal mitológico');
+alert('Ahora vas a crear un animal mitológico');
 
-const nombreDeAni = 
-prompt("Ingresa el nombre de tu animal mitológico");
-const origenAnimal =
-prompt("Ingresa el origen de tu animal mitológico");
-const caracteristicasAnimal = 
-prompt("Ingresa las características de tu animal mitológico");
-const habilidadAnimal = 
-prompt("Ingresa la habilidad de tu animal mitológico");
-const fortalezaAnimal = 
-prompt("Ingresa la fortaleza de tu animal mitológico");
-const debilidadAnimal = 
-prompt("Ingresa la debilidad de tu animal mitológico");
+const nombreDeAni = validarInput("Ingresa el nombre de tu animal mitológico");
+const origenAnimal = validarInput("Ingresa el origen de tu animal mitológico");
+const caracteristicasAnimal = validarInput("Ingresa las características de tu animal mitológico");
+const habilidadAnimal = validarInput("Ingresa la habilidad de tu animal mitológico");
+const fortalezaAnimal = validarInput("Ingresa la fortaleza de tu animal mitológico");
+const debilidadAnimal = validarInput("Ingresa la debilidad de tu animal mitológico");
 
 tuAnimalEs.push(
   new Animales(
@@ -186,6 +180,17 @@ tuAnimalEs.push(
   )
 );
 
+function validarInput(mensaje) {
+  let input;
+  do {
+    input = prompt(mensaje);
+  } while (!esLetra(input));
+  return input;
+}
+
+function esLetra(texto) {
+  return /^[a-zA-ZñÑ\s]+$/.test(texto);
+};
 
 
 const nuevoAnimal = prompt("Querés conocer a tu animal? (si/no)").toUpperCase();
@@ -193,17 +198,17 @@ function animalIngresado() {
   if (nuevoAnimal === "SI") {
     alert(
       "Tu animal es " +
-      tuAnimalEs[5].Animal +
+      nombreDeAni +
       " tiene origen en " +
-      tuAnimalEs[5].Origen +
+      origenAnimal +
       " se caracteriza por " +
-      tuAnimalEs[5].Caracteristicas +
+      caracteristicasAnimal +
       ", tiene la habilidad de " +
-      tuAnimalEs[5].Habilidad +
+      habilidadAnimal +
       ", sus fortalezas son " +
-      tuAnimalEs[5].Fortaleza +
+      fortalezaAnimal +
       ", y por ultimo su debilidad es " +
-      tuAnimalEs[5].Debilidad +
+      debilidadAnimal +
       ". Saludos, gracias por participar."
     );
   } else if (nuevoAnimal === "NO") {
@@ -214,4 +219,5 @@ function animalIngresado() {
     );
 }
 animalIngresado(tuAnimalEs[5]);
+
 
