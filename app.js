@@ -148,11 +148,11 @@ class Animales {
 alert('Ahora vas a crear un animal mitológico');
 
 const nombreDeAni = validarInput("Ingresa el nombre de tu animal mitológico");
-const origenAnimal = validarInput("Ingresa el origen de tu animal mitológico");
-const caracteristicasAnimal = validarInput("Ingresa las características de tu animal mitológico");
-const habilidadAnimal = validarInput("Ingresa la habilidad de tu animal mitológico");
-const fortalezaAnimal = validarInput("Ingresa la fortaleza de tu animal mitológico");
-const debilidadAnimal = validarInput("Ingresa la debilidad de tu animal mitológico");
+const origenAnimal = validarInput("Tu animal tiene origen en...");
+const caracteristicasAnimal = validarInput("Tu animal esta caracterizado por...");
+const habilidadAnimal = validarInput("Las habilidad de tu animal es...");
+const fortalezaAnimal = validarInput("Las fortalezas de tu animal son...");
+const debilidadAnimal = validarInput("La debilidad de tu animal es...");
 
 tuAnimalEs.push(
   new Animales(
